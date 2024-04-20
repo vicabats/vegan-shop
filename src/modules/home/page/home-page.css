@@ -1,0 +1,27 @@
+.home-page_header {
+    background-image: url('../../../assets/header-bg.jpg');
+    background-size: cover;
+    background-position: 34%;
+    height: 50vh;
+}
+
+.home-page_title-news {
+    color: #5bb359;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.home-page_new-products {
+    padding: 0 5rem;
+    display: grid;
+    grid-template-columns: 18rem 18rem 18rem 18rem;
+    grid-auto-flow: row;
+    align-items: center;
+    justify-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}

@@ -1,0 +1,12 @@
+<section class="home-page">
+    <header class="home-page_header"></header>
+    <h1 class="home-page_title-news">Produtos que acabaram de chegar</h1>
+    <ng-container *ngIf="products.length > 0">
+        <div class="home-page_new-products">
+            <div *ngFor="let product of products">
+                <app-product-card [product]=product (productClicked)="redirectToProductDetails($event)">
+                </app-product-card>
+            </div>
+        </div>
+    </ng-container>
+</section>

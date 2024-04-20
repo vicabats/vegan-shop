@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <div class="navbar_icon-div">
+        <img class="icon-img" src="/assets/logo.svg" (click)="redirectToHomepage()"
+            style="width: 150px; height: 100px;">
+    </div>
+
+    <div class="navbar_search-bar">
+        <input type="text" [(ngModel)]="searchTerm" (keydown.enter)="redirectToSearch()"
+            placeholder="Qual produto você procura?">
+        <button (click)="redirectToSearch()">Buscar</button>
+    </div>
+    <div class="navbar_actions-div">
+
+        <div class="navbar_login-div" (click)="redirectToLogin()">
+            <i class="fa-regular fa-user"></i>
+        </div>
+    </div>
+</nav>

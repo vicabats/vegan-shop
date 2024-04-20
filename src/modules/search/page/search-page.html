@@ -1,0 +1,19 @@
+<section *ngIf="queryProducts != null" class="search-page">
+    <ng-container *ngIf="queryProducts.length == 0">
+        <div>
+            <h1 class="query-term">Ops, não encontramos nada com o termo "{{query}}"</h1>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="queryProducts.length > 0">
+        <div>
+            <h1 class="query-term"> "{{query}}"</h1>
+        </div>
+        <div class="search-page_products">
+            <div *ngFor="let product of queryProducts">
+                <app-product-card [product]=product (productClicked)="redirectToProductDetails($event)">
+                </app-product-card>
+            </div>
+        </div>
+    </ng-container>
+</section>

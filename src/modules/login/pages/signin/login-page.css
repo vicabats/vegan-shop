@@ -1,0 +1,91 @@
+.login-page input {
+    border: 1px solid rgb(218, 216, 216);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.login-page_signin_wrapper,
+.login-page_signup_wrapper {
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.login-page_signin_div {
+    padding-bottom: 4rem;
+}
+
+.login_input-div {
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.login_input-div label {
+    margin-right: 0.5rem;
+}
+
+.login-page_submit {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.login-page_forgot-password {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.login-page_title {
+    color: #5bb359;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 2rem 0;
+}
+
+.login-page_title_signup {
+    color: #5bb359;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.login-page_create {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.disabled-button {
+    background-color: rgb(218, 216, 216);
+}
+
+.enabled-button {
+    background-color: rgb(197, 227, 190);
+}
+
+button[disabled] {
+    cursor: not-allowed;
+}
+
+input:focus {
+    outline: 2px solid green;
+}
+
+button:active {
+    background-color: green;
+    opacity: 60%;
+    color: white;
+}
+
+.login-page_ctas {
+    padding-top: 3rem;
+}

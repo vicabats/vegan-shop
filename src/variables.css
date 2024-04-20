@@ -1,0 +1,4 @@
+:root {
+    --mobile-query: 576px;
+    --tablet-query: 768px;
+}

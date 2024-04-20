@@ -1,0 +1,30 @@
+.tabbar {
+    background-color: rgba(144, 197, 80, 0.2);
+}
+
+.tabbar,
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.tabbar,
+li {
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    color: #a3a3a3;
+    opacity: 90%;
+    font-weight: 600;
+}
+
+.tabbar,
+li:hover {
+    color: #90c550;
+}
+
+
+.tabbar {
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}

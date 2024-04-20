@@ -1,0 +1,51 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8rem;
+}
+
+.navbar_actions-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar_search-bar input {
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 20rem;
+}
+
+input[type=text] {
+    outline: 2px solid green;
+}
+
+.navbar_search-bar button {
+    opacity: 60%;
+    margin-left: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.navbar_search-bar button:active {
+    background-color: green;
+    opacity: 60%;
+    color: white;
+}
+
+.navbar_icon-div {
+    cursor: pointer;
+}
+
+.icon-img {
+    height: 6rem;
+    width: 6rem;
+}
+
+.navbar_login-div {
+    cursor: pointer;
+    padding-left: 2rem;
+}

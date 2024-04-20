@@ -1,0 +1,32 @@
+<section class="login-page">
+    <div class="login-page_signin_div">
+        <div class="login-page_signin_wrapper">
+            <h1 class="login-page_title">Entrar</h1>
+            <form>
+                <div class="login_input-div">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" [(ngModel)]="email" required>
+                </div>
+                <div class="login_input-div">
+                    <label for="password">Senha</label>
+                    <input type="password" id="senha" name="password" [(ngModel)]="password" required>
+                </div>
+
+                <div class="login-page_ctas">
+                    <button class="login-page_submit" (click)="signIn()" [disabled]="!email || !password"
+                        [ngClass]="{ 'disabled-button': !email || !password, 'enabled-button': email && password }">
+                        Entrar</button>
+                    <button class="login-page_forgot-password">Esqueci minha senha</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <hr class="divider" />
+
+    <div class="login-page_signup_wrapper">
+        <h1 class="login-page_title_signup">Ainda não tem conta?</h1>
+        <button class="login-page_create" (click)="signUp()">Criar conta</button>
+    </div>
+</section>

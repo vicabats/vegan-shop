@@ -1,0 +1,17 @@
+section {
+    padding-top: 3rem;
+}
+
+.footer-wrapper {
+    background-color: rgb(197, 227, 190);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-wrapper p {
+    color: #fff;
+    text-align: center;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}

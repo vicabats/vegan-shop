@@ -1,0 +1,25 @@
+.search-page {
+    display: flex;
+    padding: 2rem 10rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.query-term {
+    color: #5bb359;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+}
+
+.search-page_products {
+    padding: 0 5rem;
+    display: grid;
+    grid-template-columns: 18rem 18rem 18rem;
+    grid-auto-flow: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
