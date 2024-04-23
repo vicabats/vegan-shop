@@ -27,5 +27,7 @@ export class ProductDetailsPage implements OnInit {
     });
   }
 
-  addToCart() { }
+  addToCart(): void {
+    this.productDetailsService.addToCart(this.product);
+  }
 }

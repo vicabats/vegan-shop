@@ -49,3 +49,25 @@
 .add-to-cart:hover {
     background-color: #45a049;
 }
+
+@media (max-width: 768px) {
+    .product-section {
+        padding: 2rem;
+    }
+
+    .product-details {
+        flex-direction: column;
+    }
+
+    .product-image img {
+        max-width: 100%;
+    }
+
+    .product-info {
+        margin-top: 1rem;
+    }
+
+    .add-to-cart {
+        width: 100%;
+    }
+}

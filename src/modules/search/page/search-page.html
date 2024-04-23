@@ -11,7 +11,10 @@
         </div>
         <div class="search-page_products">
             <div *ngFor="let product of queryProducts">
-                <app-product-card [product]=product (productClicked)="redirectToProductDetails($event)">
+                <app-product-card 
+                    [product]=product 
+                    (addToCartClicked)="addToCart($event)"
+                    (productClicked)="redirectToProductDetails($event)">
                 </app-product-card>
             </div>
         </div>

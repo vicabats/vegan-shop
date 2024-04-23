@@ -4,6 +4,7 @@ import { Product } from '../../shared/domain/model/product';
 import { ProductCardComponent } from '../../shared/components/product-card/product-card.component';
 import { HomeService } from '../domain/services/home.service';
 import { Router } from '@angular/router';
+import { ProductAddToCartService } from '../../shared/domain/services/product-add-to-cart.service';
 
 @Component({
   selector: 'app-home-page',
@@ -17,7 +18,8 @@ export class HomePage implements OnInit {
 
   constructor(
     private homeService: HomeService,
-    private router: Router
+    private router: Router,
+    private productAddToCart: ProductAddToCartService
   ) { }
 
 
@@ -34,4 +36,9 @@ export class HomePage implements OnInit {
   redirectToProductDetails(product: Product): void {
     this.router.navigate(['/product', product.id]);
   }
+
+  addToCart(product: Product): void {
+    this.productAddToCart.addToCart(product);
+  }
+
 }

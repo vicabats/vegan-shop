@@ -44,3 +44,9 @@ input {
     justify-content: start;
     margin-right: 0.5rem;
 }
+
+@media (max-width: 768px) {
+    .signup-page {
+        padding: 0 4rem;
+    }
+}

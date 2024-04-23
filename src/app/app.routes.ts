@@ -13,7 +13,7 @@ export const routes: Routes = [
     { path: 'signup', component: SignupPage },
     { path: 'search/:query', component: SearchPage },
     { path: 'product/:id', component: ProductDetailsPage },
-    { path: 'checkout/:id', component: CheckoutPage },
+    { path: 'checkout', component: CheckoutPage },
     { path: 'not_found', component: NotFoundPage }
 ];
 

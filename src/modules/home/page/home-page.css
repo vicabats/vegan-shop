@@ -15,13 +15,35 @@
 }
 
 .home-page_new-products {
-    padding: 0 5rem;
     display: grid;
-    grid-template-columns: 18rem 18rem 18rem 18rem;
-    grid-auto-flow: row;
-    align-items: center;
-    justify-items: start;
-    justify-content: center;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    padding: 0 5rem;
+}
+
+@media (max-width: 768px) {
+    .home-page {
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-page_header {
+        height: 20vh;
+        width: 100%;
+    }
+
+    .home-page_title-news {
+        font-size: 1rem;
+        padding: 0 1rem;
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    .home-page_new-products {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding: 0 1rem;
+        justify-content: center;
+    }
 }

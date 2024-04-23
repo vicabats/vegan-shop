@@ -1,34 +1,48 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
-  standalone: true,
-  imports: [FormsModule],
   templateUrl: './signup-page.html',
-  styleUrl: './signup-page.css'
+  styleUrls: ['./signup-page.css'],
+  imports: [ReactiveFormsModule, FormsModule],
+  standalone: true,
 })
 export class SignupPage {
-  name: string = '';
-  email: string = '';
-  password: string = '';
-  passwordConfirmation: string = '';
-  cpf: string = '';
-  telephone: string = '';
+  formulario: FormGroup;
+
+  constructor() {
+    this.formulario = new FormGroup({
+      'name': new FormControl('', [
+        Validators.required,
+        Validators.pattern(/^((?:[^\s]+(?:\s+|$)){2,})$/)
+      ]),
+      'email': new FormControl('', [
+        Validators.required,
+        Validators.email
+      ]),
+      'password': new FormControl('', [
+        Validators.required
+      ]),
+      'passwordConfirmation': new FormControl('', [
+        Validators.required
+      ]),
+      'cpf': new FormControl('', [
+        Validators.required,
+        Validators.pattern(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/)
+      ]),
+      'telephone': new FormControl('', [
+        Validators.required,
+      ])
+    });
+  }
 
   trySignUp() {
-    if (this.password == this.passwordConfirmation) {
+    if (this.formulario.valid && this.formulario.value.password === this.formulario.value.passwordConfirmation) {
       window.alert("Cadastro realizado!");
+      this.formulario.reset();
     } else {
-      window.alert("As senhas não coincidem!");
+      window.alert("Por favor, corrija os campos do formulário.");
     }
-
-    this.clearForm();
-  }
-
-  private clearForm() {
-    this.password = '';
-    this.passwordConfirmation = '';
   }
 }
-

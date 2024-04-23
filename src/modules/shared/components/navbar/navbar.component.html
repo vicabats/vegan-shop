@@ -1,7 +1,16 @@
 <nav class="navbar">
-    <div class="navbar_icon-div">
-        <img class="icon-img" src="/assets/logo.svg" (click)="redirectToHomepage()"
-            style="width: 150px; height: 100px;">
+    <div class="navbar-menu-wrapper-mobile">
+        <div class="navbar_icon-div">
+            <img class="icon-img" src="/assets/logo.svg" (click)="redirectToHomepage()">
+        </div>
+        <div class="navbar_mobile-actions">
+            <div class="navbar_login-div" (click)="redirectToCheckout()">
+                <i class="fa fa-shopping-cart"></i>
+            </div>
+            <div class="navbar_login-div" (click)="redirectToLogin()">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </div>
     </div>
 
     <div class="navbar_search-bar">
@@ -9,8 +18,11 @@
             placeholder="Qual produto você procura?">
         <button (click)="redirectToSearch()">Buscar</button>
     </div>
+    
     <div class="navbar_actions-div">
-
+        <div class="navbar_login-div" (click)="redirectToCheckout()">
+            <i class="fa fa-shopping-cart"></i>
+        </div>
         <div class="navbar_login-div" (click)="redirectToLogin()">
             <i class="fa-regular fa-user"></i>
         </div>

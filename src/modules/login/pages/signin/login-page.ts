@@ -20,6 +20,7 @@ export class LoginPage {
     console.log('Email:', this.email);
     console.log('Senha:', this.password);
     window.alert("Login realizado!");
+    this.router.navigate(["/"]);
   }
 
   signUp() {

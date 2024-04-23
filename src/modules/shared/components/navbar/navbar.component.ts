@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class NavbarComponent {
   searchTerm: string = '';
+  isMenuOpen: boolean = false;
 
 
   constructor(private router: Router) { }
@@ -27,6 +28,10 @@ export class NavbarComponent {
 
   public redirectToLogin() {
     this.router.navigate(["signin"]);
+  }
+
+  public redirectToCheckout() {
+    this.router.navigate(["checkout"]);
   }
 
   private clearSearchTerm() {

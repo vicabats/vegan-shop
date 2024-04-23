@@ -1,1 +1,38 @@
-<p>checkout-page works!</p>
+<div class="cart-container">
+    <h2>Carrinho</h2>
+    <div *ngIf="checkoutItems.length === 0; else cartItemsList">
+        <p>Seu carrinho está vazio!</p>
+    </div>
+    <ng-template #cartItemsList>
+        <div *ngFor="let item of checkoutItems">
+            <div class="cart-item">
+                <div>{{ item.name }}</div>
+                <div>
+                    <div>
+                        <select [(ngModel)]="item.quantity" (change)="updateCart(item)">
+                            <option *ngFor="let value of quantityOptions" [value]="value">{{ value }}</option>
+                        </select>
+                    </div>
+                </div>
+                <div>{{ item.price | currency:'BRL':true:'1.2-2' }}</div>
+            </div>
+        </div>
+        
+        <div *ngIf="checkout?.total_price" class="total">
+            <div style="display: flex;gap: 1rem;"> 
+                <p>Total: </p>
+                <p *ngIf="loading">
+                    <img src="assets/loader.gif" class="loader">
+                </p>
+                <p *ngIf="!loading">
+                     {{ checkout.total_price| currency:'BRL':true:'1.2-2' }}
+                </p>
+            </div>
+        </div>
+
+        <div class="ctas-wrapper">
+            <button (click)="clearCart()">Limpar carrinho</button>
+            <button class="finish-checkout-button" (click)="finishCheckout()">Finalizar Compra</button>
+        </div>
+    </ng-template>
+</div>

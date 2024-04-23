@@ -6,10 +6,23 @@
     padding: 0 8rem;
 }
 
+.mobile-navbar {
+    display: none;
+}
+
+.icon-img {
+    height: 100px;
+    width: 150px;
+}
+
 .navbar_actions-div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.navbar_menu-toggle {
+    display: none;
 }
 
 .navbar_search-bar input {
@@ -24,10 +37,10 @@ input[type=text] {
 
 .navbar_search-bar button {
     opacity: 60%;
-    margin-left: 1rem;
     padding: 1rem;
     border-radius: 2rem;
     cursor: pointer;
+    margin-left: 1rem;
 }
 
 .navbar_search-bar button:active {
@@ -41,11 +54,104 @@ input[type=text] {
 }
 
 .icon-img {
-    height: 6rem;
-    width: 6rem;
+    height: 5rem;
+    width: 10rem;
 }
 
 .navbar_login-div {
     cursor: pointer;
     padding-left: 2rem;
+}
+
+.mobile-navbar {
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    left: -100%;
+}
+
+
+.navbar_menu.open {
+    display: block;
+    left: 0;
+}
+
+.navbar_mobile-actions{ 
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 2rem 2rem 0 2rem;
+        flex-direction: column;
+        align-items: center;
+        display: block;
+    }
+
+    .navbar_mobile-actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .navbar_actions-div {
+        display: none;
+    }
+
+    .navbar-menu-wrapper-mobile {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .navbar_menu-toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .navbar_icon-div {
+        margin-bottom: 1rem;
+    }
+
+    .navbar_search-bar {
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    .navbar_search-bar button {
+        width: auto;
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    .navbar_search-bar input {
+        width: auto;
+        height: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .navbar_actions-div {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .navbar_login-div {
+        padding-left: 0;
+    }
+
+    .icon-img {
+        height: 4rem;
+        width: 100%;
+    }
 }

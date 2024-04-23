@@ -23,3 +23,17 @@
     flex-wrap: wrap;
     gap: 2rem;
 }
+
+@media (max-width: 768px) {
+    .search-page {
+        padding: 0;
+    }
+
+    .search-page_products {
+        display: flex;
+    }
+
+    .query-term {
+        padding: 2rem;
+    }
+}
