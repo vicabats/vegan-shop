@@ -1,4 +1,4 @@
-# VeganShop
+# ShopVegan
 
 Para rodar o projeto:
 1. Primeiro rode o servidor mockado (json-server):
